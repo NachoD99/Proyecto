@@ -1,0 +1,158 @@
+using System;
+using System.Collections.Generic;
+
+namespace OpenShop
+{
+   
+    class GestorVenta
+    {
+        static Carrito Carrito = new Carrito();
+        static Venta Venta = new Venta();
+
+        static void Main(string[] args)
+        {
+            System.Console.WriteLine("\nBIENVENIDO A OPEN SHOP");
+            while (true)
+            {
+                var fin = Comprar();
+
+                if (fin)
+                {
+                    break;
+                }
+            }
+            Venta.MetodoPago();
+            System.Console.WriteLine("Gracias por comprar en Open Shop");
+        }
+
+        static public bool Comprar()
+        {
+            RegistroProductos.MostrarProductos();
+
+            System.Console.WriteLine("\nSeleccione un producto");
+            var opcionProducto = System.Console.ReadLine();
+            var producto = RegistroProductos.Productos[int.Parse(opcionProducto) - 1];
+
+            System.Console.WriteLine("\nIntroduzca la cantidad de productos que desea comprar:");
+            var opcionCantidad = System.Console.ReadLine();
+            int cantidadElegida = (int.Parse(opcionCantidad));
+
+            Carrito.Agregar(producto, cantidadElegida);
+            Carrito.MostrarCarrito();
+
+            System.Console.WriteLine("\nDigite 1 para seguir comprando, 2 para seleccionar metodo de pago");
+            var opcionSeguir = System.Console.ReadLine();
+
+            if (int.Parse(opcionSeguir) == 1)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    }
+
+    class RegistroProductos
+    {
+        public static List<Producto> Productos = new List<Producto>();
+
+        static RegistroProductos()
+        {
+            Productos.Add(new Producto("Cafetera", 3000));
+            Productos.Add(new Producto("Celular", 249999.99m));
+            Productos.Add(new Producto("Televisor", 22000));
+            Productos.Add(new Producto("Heladera", 29999.99m));
+            Productos.Add(new Producto("Mouse",500));
+            Productos.Add(new Producto("Teclado",900));
+            Productos.Add(new Producto("Computadora",50000));
+        }
+        static public void MostrarProductos()
+        {
+            System.Console.WriteLine("Listado de productos:");
+            int posicion = 1;
+            foreach (var producto in Productos)
+            {
+                System.Console.WriteLine(posicion + "-" + producto.Nombre +" $" + producto.Precio);
+                posicion++;
+            }
+        }
+    }
+
+    class Producto
+    {
+       public string Nombre { get; set; }
+       public decimal Precio { get; set; }
+
+       public Producto(string nombre, decimal precio)
+       {
+           Nombre = nombre;
+           Precio = precio;
+       }
+    }
+
+    class Carrito
+    {
+       private List<ItemCarrito> Productos = new List<ItemCarrito>();
+
+       public void Agregar(Producto producto, int cantidad)
+        {
+            var productoEnCarrito = new ItemCarrito();
+            productoEnCarrito.Producto = producto;
+            productoEnCarrito.Cantidad = cantidad;
+
+            Productos.Add(productoEnCarrito);
+        }
+
+       public void MostrarCarrito()
+        {
+            System.Console.WriteLine("\nTienes en tu carrito: ");
+
+            decimal totalCarrito = 0;
+            foreach (var productoEnCarrito in Productos)
+            {
+                var cantidad = productoEnCarrito.Cantidad;
+                var precio = productoEnCarrito.Producto.Precio;
+                var nombre = productoEnCarrito.Producto.Nombre;
+                System.Console.WriteLine(cantidad + "x " + nombre + " $" + cantidad * precio);
+
+                totalCarrito = totalCarrito + cantidad * precio;
+            }
+
+            System.Console.WriteLine("Total: $" + totalCarrito);
+        }
+    }
+
+    class ItemCarrito
+    {
+        public Producto Producto { get; set; }
+        public int Cantidad { get; set; }
+    }
+
+    class Venta
+    {
+    public void MetodoPago()
+    {
+        System.Console.WriteLine("Seleccione medio de pago:");
+        System.Console.WriteLine("1. Tarjeta crédito a 6 cuotas");
+        System.Console.WriteLine("2. Tarjeta debito");
+        var medioPago = System.Console.ReadLine();
+
+        if (string.IsNullOrEmpty(medioPago))
+        {
+            System.Console.WriteLine("Por favor seleccione un medio de pago");
+            MetodoPago();
+        }
+
+        if(int.Parse(medioPago) == 1)
+        {
+            System.Console.WriteLine("Usted seleccionó pagar con tarjeta de crédito");
+        }
+        if(int.Parse(medioPago) == 2)
+        {
+            System.Console.WriteLine("Usted seleccionó pagar con tarjeta de débito");
+        }
+    }
+    }
+}
