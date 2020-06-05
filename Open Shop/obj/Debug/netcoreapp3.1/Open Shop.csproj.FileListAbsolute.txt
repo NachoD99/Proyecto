@@ -1,0 +1,26 @@
+C:\Users\usuario\Desktop\Open Shop\bin\Debug\netcoreapp3.1\Open Shop.exe
+C:\Users\usuario\Desktop\Open Shop\bin\Debug\netcoreapp3.1\Open Shop.deps.json
+C:\Users\usuario\Desktop\Open Shop\bin\Debug\netcoreapp3.1\Open Shop.runtimeconfig.json
+C:\Users\usuario\Desktop\Open Shop\bin\Debug\netcoreapp3.1\Open Shop.runtimeconfig.dev.json
+C:\Users\usuario\Desktop\Open Shop\bin\Debug\netcoreapp3.1\Open Shop.dll
+C:\Users\usuario\Desktop\Open Shop\bin\Debug\netcoreapp3.1\Open Shop.pdb
+C:\Users\usuario\Desktop\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.csprojAssemblyReference.cache
+C:\Users\usuario\Desktop\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.AssemblyInfoInputs.cache
+C:\Users\usuario\Desktop\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.AssemblyInfo.cs
+C:\Users\usuario\Desktop\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.dll
+C:\Users\usuario\Desktop\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.pdb
+C:\Users\usuario\Desktop\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.genruntimeconfig.cache
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.csprojAssemblyReference.cache
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.AssemblyInfoInputs.cache
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.AssemblyInfo.cs
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.dll
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.pdb
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\Open Shop\bin\Debug\netcoreapp3.1\Open Shop.exe
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\Open Shop\bin\Debug\netcoreapp3.1\Open Shop.deps.json
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\Open Shop\bin\Debug\netcoreapp3.1\Open Shop.runtimeconfig.json
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\Open Shop\bin\Debug\netcoreapp3.1\Open Shop.runtimeconfig.dev.json
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\Open Shop\bin\Debug\netcoreapp3.1\Open Shop.dll
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\Open Shop\bin\Debug\netcoreapp3.1\Open Shop.pdb
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\Open Shop\obj\Debug\netcoreapp3.1\Open Shop.genruntimeconfig.cache
