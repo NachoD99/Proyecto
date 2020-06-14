@@ -1,0 +1,13 @@
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\TP 2\bin\Debug\netcoreapp3.1\TP 2.exe
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\TP 2\bin\Debug\netcoreapp3.1\TP 2.deps.json
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\TP 2\bin\Debug\netcoreapp3.1\TP 2.runtimeconfig.json
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\TP 2\bin\Debug\netcoreapp3.1\TP 2.runtimeconfig.dev.json
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\TP 2\bin\Debug\netcoreapp3.1\TP 2.dll
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\TP 2\bin\Debug\netcoreapp3.1\TP 2.pdb
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\TP 2\obj\Debug\netcoreapp3.1\TP 2.csprojAssemblyReference.cache
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\TP 2\obj\Debug\netcoreapp3.1\TP 2.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\TP 2\obj\Debug\netcoreapp3.1\TP 2.AssemblyInfoInputs.cache
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\TP 2\obj\Debug\netcoreapp3.1\TP 2.AssemblyInfo.cs
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\TP 2\obj\Debug\netcoreapp3.1\TP 2.dll
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\TP 2\obj\Debug\netcoreapp3.1\TP 2.pdb
+C:\Users\usuario\Documents\Tercer año sistemas\Diseño de sistemas\TP 2\obj\Debug\netcoreapp3.1\TP 2.genruntimeconfig.cache
