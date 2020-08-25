@@ -1,0 +1,24 @@
+[
+  {
+    "fechaInicio": "2020-08-25T00:00:00-03:00",
+    "fechaFinalizacion": "2020-08-29T00:00:00-03:00",
+    "nombreCurso": "d",
+    "dias": "d",
+    "horarios": "d",
+    "cupoDisponible": 7,
+    "cupoMinimo": 4,
+    "estadoCurso": true,
+    "docente": {
+      "idDocente": 3,
+      "nombreDocente": "Docente 3",
+      "domicilio": "Domicilio 3",
+      "telefono": "Telefono 3",
+      "email": null,
+      "dni": "DNI 3",
+      "especialidad": "Especialidad 3",
+      "nombreCursoInscripto": null,
+      "fechaInscripcion": "0001-01-01T00:00:00"
+    },
+    "descripcion": "d"
+  }
+]
