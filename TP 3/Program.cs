@@ -6,7 +6,7 @@ namespace TP_3
 {
     class GestorCursos
     {
-        
+        //Este TP es antiguo - el actual es TP3 - PERSISTENCIA
         static void Main(string[] args)
         {
             
