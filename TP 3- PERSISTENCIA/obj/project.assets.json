@@ -765,11 +765,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\usuario\\Documents\\SISTEMAS\\03-Tercer año sistemas\\01-Diseño de sistemas\\TP 3\\TP 3.csproj",
+      "projectUniqueName": "C:\\Users\\usuario\\Documents\\SISTEMAS\\03-Tercer año sistemas\\01-Diseño de sistemas\\Repositorios\\Proyecto\\TP 3- PERSISTENCIA\\TP 3.csproj",
       "projectName": "TP 3",
-      "projectPath": "C:\\Users\\usuario\\Documents\\SISTEMAS\\03-Tercer año sistemas\\01-Diseño de sistemas\\TP 3\\TP 3.csproj",
+      "projectPath": "C:\\Users\\usuario\\Documents\\SISTEMAS\\03-Tercer año sistemas\\01-Diseño de sistemas\\Repositorios\\Proyecto\\TP 3- PERSISTENCIA\\TP 3.csproj",
       "packagesPath": "C:\\Users\\usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\usuario\\Documents\\SISTEMAS\\03-Tercer año sistemas\\01-Diseño de sistemas\\TP 3\\obj\\",
+      "outputPath": "C:\\Users\\usuario\\Documents\\SISTEMAS\\03-Tercer año sistemas\\01-Diseño de sistemas\\Repositorios\\Proyecto\\TP 3- PERSISTENCIA\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

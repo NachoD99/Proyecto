@@ -1,24 +1,48 @@
 [
   {
-    "fechaInicio": "2020-08-25T00:00:00-03:00",
-    "fechaFinalizacion": "2020-08-29T00:00:00-03:00",
-    "nombreCurso": "Excel básico",
-    "dias": "Lunes",
-    "horarios": "14hs",
-    "cupoDisponible": 30,
+    "fechaInicio": "2020-08-28T00:00:00-03:00",
+    "fechaFinalizacion": "2020-09-02T00:00:00-03:00",
+    "nombreCurso": "Marketing",
+    "dias": "Miercoles",
+    "horarios": "16hs",
+    "cupoDisponible": 20,
     "cupoMinimo": 5,
     "estadoCurso": true,
     "docente": {
-      "idDocente": 3,
-      "nombreDocente": "Docente 3",
+      "id": 2,
+      "nombre": "Docente 2",
+      "domicilio": "Domicilio 2",
+      "telefono": "Telefono 2",
+      "email": null,
+      "dni": "DNI 2",
+      "especialidad": "Especialidad 2",
+      "tipoPersona": null,
+      "nombreCursoInscripto": null,
+      "fechaInscripcion": "0001-01-01T00:00:00"
+    },
+    "descripcion": "Conceptos de marketing digital"
+  },
+  {
+    "fechaInicio": "2020-08-28T00:00:00-03:00",
+    "fechaFinalizacion": "2020-09-04T00:00:00-03:00",
+    "nombreCurso": "Excel para empresas",
+    "dias": "Jueves",
+    "horarios": "18hs",
+    "cupoDisponible": 30,
+    "cupoMinimo": 10,
+    "estadoCurso": true,
+    "docente": {
+      "id": 3,
+      "nombre": "Docente 3",
       "domicilio": "Domicilio 3",
       "telefono": "Telefono 3",
       "email": null,
       "dni": "DNI 3",
       "especialidad": "Especialidad 3",
+      "tipoPersona": null,
       "nombreCursoInscripto": null,
       "fechaInscripcion": "0001-01-01T00:00:00"
     },
-    "descripcion": "Conocimientos básicos de Excel"
+    "descripcion": "Excel empresarial. Para todo public"
   }
 ]

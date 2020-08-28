@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "nombre": "Ignacio Davanzo",
+    "domicilio": null,
+    "telefono": "524167",
+    "email": "nachodavanzo",
+    "dni": "42245506",
+    "especialidad": null,
+    "tipoPersona": "Alumno",
+    "nombreCursoInscripto": "Marketing",
+    "fechaInscripcion": "2020-08-28T00:00:00-03:00"
+  },
+  {
+    "id": 0,
+    "nombre": "Carlos Garmendia",
+    "domicilio": null,
+    "telefono": "513654",
+    "email": "c.garmendia@gmail.com",
+    "dni": "21568456",
+    "especialidad": null,
+    "tipoPersona": "Publico general",
+    "nombreCursoInscripto": "Marketing",
+    "fechaInscripcion": "2020-08-28T00:00:00-03:00"
+  }
+]
