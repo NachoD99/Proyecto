@@ -11,10 +11,9 @@ namespace TP_3
         static void Main(string[] args)
         {
             
-            Persona docente = new Persona();
-            docente.registrarDocente();
+            Persona.registrarDocente();
 
-            System.Console.WriteLine("Bienvenido a la secretaría de extensión y cultura de la Facultad");
+            System.Console.WriteLine("\nBienvenido a la secretaría de extensión y cultura de la Facultad");
             Administrador();
         }
         public static void Administrador ()
@@ -44,6 +43,7 @@ namespace TP_3
 
     class Curso
     {
+        public Guid id { get; set; }
         public DateTime fechaInicio { get; set; }
         public DateTime fechaFinalizacion { get; set; }
         public string nombreCurso { get; set; }
@@ -58,7 +58,7 @@ namespace TP_3
         public static int cantidadCursos;
 
         public Curso(){}
-   public Curso(string nombreCurso, string dias, string horarios, int cupoDisponible, int cupoMinimo, bool estadoCurso, 
+        public Curso(string nombreCurso, string dias, string horarios, int cupoDisponible, int cupoMinimo, bool estadoCurso, 
                 string descripcion, Persona docente, DateTime fechaInicio, DateTime fechaFinalizacion)
         {
             this.nombreCurso = nombreCurso;
@@ -141,7 +141,6 @@ namespace TP_3
                 System.Console.WriteLine("Nombre: "+i.nombreCurso);
                 System.Console.WriteLine("Día: "+i.dias);
                 System.Console.WriteLine("Horario: "+i.horarios);
-                //System.Console.WriteLine("Docente a cargo: "+i.docente.nombreDocente);
                 System.Console.WriteLine("Fecha inicio: "+i.fechaInicio);
                 System.Console.WriteLine("Fecha finalización: "+i.fechaFinalizacion);
 
@@ -160,12 +159,22 @@ namespace TP_3
         public string email { get; set; }
         public string dni { get; set; }
         public string especialidad { get; set; }
-        public string tipoPersona { get; set; }
         public static List<Persona> docentes = new List<Persona>();
         public string nombreCursoInscripto { get; set; }
         public DateTime fechaInscripcion { get; set; }
         
         public Persona (){}
+        
+        public Persona(string nombre, string dni, string email, string telefono,
+        string nombreCursoInscripto, DateTime fechaInscripcion)
+        {
+            this.nombre = nombre;
+            this.dni = dni;
+            this.email = email;
+            this.telefono = telefono;
+            this.nombreCursoInscripto = nombreCursoInscripto;
+            this.fechaInscripcion = fechaInscripcion;
+        }
         public Persona(int id,string nombre, string domicilio, string telefono,
                       string mail, string dni, string especialidad)
         {
@@ -177,18 +186,8 @@ namespace TP_3
             this.dni = dni;
             this.especialidad = especialidad;
         }  
-        public Persona(string nombre,string tipoPersona, string dni, string email, string telefono,
-        string nombreCursoInscripto, DateTime fechaInscripcion)
-        {
-            this.nombre = nombre;
-            this.tipoPersona = tipoPersona;
-            this.dni = dni;
-            this.email = email;
-            this.telefono = telefono;
-            this.nombreCursoInscripto = nombreCursoInscripto;
-            this.fechaInscripcion = fechaInscripcion;
-        }
-        public void registrarDocente ()
+        
+        public static void registrarDocente ()
         {
             docentes.Add(new Persona(1,"Docente 1", "Domicilio 1","Telefono 1","Mail 1", "DNI 1", "Especialidad 1"));
             docentes.Add(new Persona(2,"Docente 2", "Domicilio 2","Telefono 2","Mail 2", "DNI 2", "Especialidad 2"));
@@ -219,6 +218,7 @@ namespace TP_3
 
     class Inscripcion
     {
+        public Guid id { get; set; }
         public static Curso cursoInscripto { get; set; }
         public static DateTime fechaInscripcion { get; set; }
         public static List<Persona> personasEnCurso = new List<Persona>();
@@ -226,17 +226,6 @@ namespace TP_3
 
         public static void registrarInscripcion ()
         {   
-            var personaEs="";
-            cursosInscripcion = Curso.cursos;
-            System.Console.WriteLine("Usted es:\n1- Alumno\n2- Docente\n3- Público general");
-            var opcionInscripcion = int.Parse(System.Console.ReadLine());
-
-            if (opcionInscripcion == 1) personaEs = "Alumno";
-            
-            if (opcionInscripcion == 2) personaEs = "Docente";
-            
-            if (opcionInscripcion == 3) personaEs = "Publico general";
-            
             //Pedir datos
             System.Console.WriteLine("Ingrese su nombre y apellido: ");
             var nombre1 = System.Console.ReadLine();
@@ -257,7 +246,7 @@ namespace TP_3
                 {
                     cursoInscripto = cursosInscripcion.ElementAt(opcionCurso-1);
                     fechaInscripcion = DateTime.Today;
-                    personasEnCurso.Add(new Persona(nombre1, personaEs, dni1, email1, tel1, cursoInscripto.nombreCurso, fechaInscripcion));
+                    personasEnCurso.Add(new Persona(nombre1, dni1, email1, tel1, cursoInscripto.nombreCurso, fechaInscripcion));
                 
                     //Serializar personas en curso
                     var personasEnCursoJson = JsonConvert.SerializeObject(personasEnCurso, Formatting.Indented);
@@ -280,7 +269,6 @@ namespace TP_3
                 foreach (var i in JsonPersonas)
                 {
                 System.Console.WriteLine("Nombre: "+i.nombre);
-                System.Console.WriteLine("Es: "+i.tipoPersona);
                 System.Console.WriteLine("Asiste al curso: "+i.nombreCursoInscripto);
                 System.Console.WriteLine("Fecha de inscripción: "+i.fechaInscripcion+"\n");
                 } 
