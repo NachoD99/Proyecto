@@ -10,9 +10,6 @@ namespace TP_3
         
         static void Main(string[] args)
         {
-            
-            Persona.registrarDocente();
-
             System.Console.WriteLine("\nBienvenido a la secretaría de extensión y cultura de la Facultad");
             Administrador();
         }
@@ -55,6 +52,7 @@ namespace TP_3
         public Persona docente { get; set; }
         public string descripcion { get; set; }
         public static List<Curso> cursos = new List<Curso>();
+        public static List<Persona> docentes = new List<Persona>();
         public static int cantidadCursos;
 
         public Curso(){}
@@ -72,8 +70,22 @@ namespace TP_3
             this.fechaInicio = fechaInicio;
             this.fechaFinalizacion = fechaFinalizacion;
         }
+
+        public static void registrarDocente ()
+        {
+            docentes.Add(new Persona(1,"Docente 1", "Domicilio 1","Telefono 1","Mail 1", "DNI 1", "Especialidad 1"));
+            docentes.Add(new Persona(2,"Docente 2", "Domicilio 2","Telefono 2","Mail 2", "DNI 2", "Especialidad 2"));
+            docentes.Add(new Persona(3,"Docente 3", "Domicilio 3","Telefono 3","Mail 3", "DNI 3", "Especialidad 3"));
+            docentes.Add(new Persona(4,"Docente 4", "Domicilio 4","Telefono 4","Mail 4", "DNI 4", "Especialidad 4"));
+            docentes.Add(new Persona(5,"Docente 5", "Domicilio 5","Telefono 5","Mail 5", "DNI 5", "Especialidad 5"));
+
+            var docenteJson = JsonConvert.SerializeObject(docentes, Formatting.Indented);
+            System.IO.File.WriteAllText("docentes.Json", docenteJson);
+        }
         public void registrarCursos ()
         {
+            Curso.registrarDocente();
+
             //Pedir datos de los cursos
             System.Console.WriteLine("Nombre del curso: ");
             nombreCurso = System.Console.ReadLine();
@@ -100,7 +112,7 @@ namespace TP_3
             fechaFinalizacion = fechaInicio.AddDays(duracion);
 
             int docenteElegido= asignarDocente(); 
-            docente = Persona.docentes.ElementAt(docenteElegido-1);
+            docente = Curso.docentes.ElementAt(docenteElegido-1);
             
             cursos.Add(new Curso (nombreCurso, dias, horarios, cupoDisponible, cupoMinimo, true, descripcion, docente, fechaInicio, fechaFinalizacion));
             
@@ -159,7 +171,6 @@ namespace TP_3
         public string email { get; set; }
         public string dni { get; set; }
         public string especialidad { get; set; }
-        public static List<Persona> docentes = new List<Persona>();
         public string nombreCursoInscripto { get; set; }
         public DateTime fechaInscripcion { get; set; }
         
@@ -186,18 +197,6 @@ namespace TP_3
             this.dni = dni;
             this.especialidad = especialidad;
         }  
-        
-        public static void registrarDocente ()
-        {
-            docentes.Add(new Persona(1,"Docente 1", "Domicilio 1","Telefono 1","Mail 1", "DNI 1", "Especialidad 1"));
-            docentes.Add(new Persona(2,"Docente 2", "Domicilio 2","Telefono 2","Mail 2", "DNI 2", "Especialidad 2"));
-            docentes.Add(new Persona(3,"Docente 3", "Domicilio 3","Telefono 3","Mail 3", "DNI 3", "Especialidad 3"));
-            docentes.Add(new Persona(4,"Docente 4", "Domicilio 4","Telefono 4","Mail 4", "DNI 4", "Especialidad 4"));
-            docentes.Add(new Persona(5,"Docente 5", "Domicilio 5","Telefono 5","Mail 5", "DNI 5", "Especialidad 5"));
-
-            var docenteJson = JsonConvert.SerializeObject(docentes, Formatting.Indented);
-            System.IO.File.WriteAllText("docentes.Json", docenteJson);
-        }
 
         public static void mostrarDocentes ()
         {
